@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+/* Navbar */
+nav {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  position: fixed;
+  z-index: 5;
+  width: 99vw;
+  height: 6rem;
+  background-color: rgba(163, 230, 254, 0.33);
+  display: flex;
+  justify-content: space-between;
+}
+#navLogo {
+  display: inline;
+}
+#option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#option a {
+  text-decoration: none;
+  color: black;
+  padding: 0vw 1vw;
+}
+#option :hover {
+  color: rgb(2, 77, 2);
+}
+.halfContainer {
+  display: none;
+}
+/* firstSection */
+#firstSec {
+  background-image: url(img/Upper\ first\ part.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+  width: 100%;
+  font-size: 1rem;
+}
+#firstSecPara p {
+  display: inline;
+}
+#firstSecPara {
+  display: inline-block;
+  height: 14vw;
+  padding: 35% 60vw 0vw 16vw;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.contBtn {
+  display: inline-block;
+  border: none;
+  background-color: brown;
+  color: white;
+  padding: 0.6vw;
+  border-radius: 1vw;
+  margin: 0 calc(45vw);
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.contBtn:hover {
+  background-color: red;
+}
+
+/* secondPara */
+#secondSec {
+  background-image: url(img/Upper\ second.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 99vw;
+  height: 45vw;
+}
+#secondHeading {
+  font-family: "Grandstander", cursive;
+  font-size: la;
+  font-weight: 700;
+  font-style: bold;
+  color: rgb(153, 90, 212);
+  display: inline-block;
+  margin: 15vw 0vw 0vw 54vw;
+}
+#secondPara {
+  width: 40vw;
+  margin: 0vw 0vw 0vw 54vw;
+}
+/* thirdSection */
+#thirdSec {
+  background-image: url(img/menu\ section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+}
+#thirdSecPar {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.thirdSecText {
+  padding-top: 36vw;
+  color: white;
+  font-size: 1rem;
+}
+#testSection {
+  background-image: url(img/test\ sec.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 38vw;
+}
+#testSecQuote {
+  width: 20vw;
+  padding: 5vw 25vw;
+  font-size: 1rem;
+}
+footer {
+  height: 15vw;
+  background-color: rgba(94, 96, 183, 0.846);
+}
+#footerText {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vw;
+}
+#footerText a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+#footerText li {
+  list-style: none;
+}
+#footerBottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(94, 96, 183);
+}
+#footerCopy {
+  display: inline;
+}
+#footerCopy p {
+  display: inline;
+}
+#footerBtmText p {
+  display: inline;
+  padding: 0vw 1vw;
+}
+#footerBtmText {
+  display: inline;
+}
+/* Responsive */
+* {
+  margin: 0;
+  padding: 0;
+}
+#hamSection {
+  display: none;
+}
+.Hide {
+  display: none;
+}
+.Show {
+  display: block;
+}
+
+@media (max-width: 361px) {
+  #option {
+    display: none;
+  }
+  #linkContainer {
+    display: none;
+  }
+
+  #hamSection {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .hamLinkContainer {
+    display: inline-block;
+    margin: 2vw;
+  }
+  .hamLinkContainer li {
+    list-style: none;
+  }
+  .hamLinkContainer a {
+    text-decoration: none;
+    color: black;
+  }
+  .halfContainer {
+    position: fixed;
+    transition: all 0.3s ease;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .halfContainerTransition {
+    width: 50vw;
+    height: 110vh;
+    float: right;
+    background-color: rgba(94, 96, 183, 0.846);
+    transition: all 0.3s ease;
+  }
+  .halfContainerTransition a {
+    color: white;
+  }
+  #firstSec {
+    height: 45vh;
+  }
+  #firstSecPara {
+    padding: 55% 30vw 0vw 29vw;
+  }
+  #secondSec {
+    height: 75vw;
+  }
+}

@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+/* Navbar */
+nav {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  position: fixed;
+  z-index: 5;
+  width: 99vw;
+  height: 6rem;
+}
+nav {
+  background-color: rgba(163, 230, 254, 0.33);
+}
+#option {
+  float: right;
+  margin: 2.7vw 0vw 0vw 40vw;
+}
+#option a {
+  text-decoration: none;
+  color: black;
+  padding: 1vw;
+}
+#option :hover {
+  color: rgb(2, 77, 2);
+}
+/* firstSection */
+#firstSec {
+  background-image: url(img/Upper\ first\ part.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+  width: 100%;
+}
+#firstSecPara p {
+  display: inline;
+}
+#firstSecPara {
+  display: inline-block;
+  height: 14vw;
+  padding: 35vw 60vw 0vw 16vw;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.contBtn {
+  display: inline-block;
+  border: none;
+  background-color: brown;
+  color: white;
+  padding: 0.6vw;
+  border-radius: 1vw;
+  margin: 0 calc(45vw);
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.contBtn:hover {
+  background-color: red;
+}
+/* secondPara */
+#secondSec {
+  background-image: url(img/Upper\ second.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 99vw;
+  height: 45vw;
+}
+#secondHeading {
+  font-family: "Grandstander", cursive;
+  font-size: la;
+  font-weight: 700;
+  font-style: bold;
+  color: rgb(153, 90, 212);
+  display: inline-block;
+  margin: 15vw 0vw 0vw 54vw;
+}
+#secondPara {
+  width: 40vw;
+  margin: 0vw 0vw 0vw 54vw;
+}
+/* thirdSection */
+#thirdSec {
+  background-image: url(img/menu\ section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+}
+#thirdSecPar {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.thirdSecText {
+  padding-top: 36vw;
+  color: white;
+}
+#testSection {
+  background-image: url(img/test\ sec.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 38vw;
+}
+#testSecQuote {
+  width: 20vw;
+  padding: 11vw 25vw;
+}
+footer {
+  height: 25vw;
+  background-color: rgba(94, 96, 183, 0.846);
+  display: flex;
+}
+#footerText {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 22.5vw;
+}
+#footerText a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+#footerText li {
+  list-style: none;
+}
+#footerCopy {
+  display: inline;
+}
+#footerCopy p {
+  display: inline;
+}
+#footerBtmText p {
+  display: inline;
+  padding: 0vw 1vw;
+}
+#footerBtmText {
+  display: inline;
+  margin-left: 70vw;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  #firstSec {
+    height: 60vw;
+  }
+  #secondSec {
+    height: 55vw;
+  }
+  #thirdSec {
+    height: 60vw;
+  }
+  #testSection {
+    height: 45vw;
+  }
+}
+
+@media (max-width: 992px) {
+  #option {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  #firstSecPara {
+    padding: 20vw 10vw 0vw 10vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 30vw;
+  }
+  #secondPara {
+    width: 60vw;
+    margin: 0vw 0vw 0vw 20vw;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 4rem;
+  }
+  #option a {
+    padding: 0.5vw;
+  }
+  #firstSec {
+    height: 70vw;
+  }
+  #firstSecPara {
+    padding: 20vw 5vw 0vw 5vw;
+  }
+  .contBtn {
+    padding: 0.8vw;
+    margin: 0 calc(35vw);
+  }
+  #secondSec {
+    height: 65vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 20vw;
+  }
+  #secondPara {
+    width: 70vw;
+    margin: 0vw 0vw 0vw 15vw;
+  }
+  #thirdSec {
+    height: 70vw;
+  }
+  .thirdSecText {
+    padding-top: 50vw;
+  }
+  #testSection {
+    height: 55vw;
+  }
+  #testSecQuote {
+    width: 80vw;
+    padding: 10vw 10vw;
+  }
+  footer {
+    height: 30vw;
+  }
+  #footerText {
+    flex-direction: column;
+    height: auto;
+    padding: 5vw 0;
+  }
+  #footerBtmText {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #firstSec {
+    height: 80vw;
+  }
+  #firstSecPara {
+    padding: 25vw 5vw 0vw 5vw;
+  }
+  .contBtn {
+    padding: 1vw;
+    margin: 0 calc(30vw);
+  }
+  #secondSec {
+    height: 75vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 15vw;
+  }
+  #secondPara {
+    width: 80vw;
+    margin: 0vw 0vw 0vw 10vw;
+  }
+  #thirdSec {
+    height: 80vw;
+  }
+  .thirdSecText {
+    padding-top: 60vw;
+  }
+  #testSection {
+    height: 65vw;
+  }
+  #testSecQuote {
+    width: 90vw;
+    padding: 15vw 5vw;
+  }
+  footer {
+    height: auto;
+  }
+  #footerText {
+    flex-direction: column;
+    height: auto;
+    padding: 5vw 0;
+  }
+  #footerBtmText {
+    margin-left: 0;
+    text-align: center;
+  }
+}

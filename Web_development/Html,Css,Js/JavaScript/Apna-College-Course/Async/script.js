@@ -92,15 +92,36 @@
 //     console.log("success");
 //   });
 // async-Await
-async function printVal(dataPrint) {
+// async function printVal(dataPrint) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data Print Work...", dataPrint);
+//       resolve(200);
+//     }, 5000);
+//   });
+// }
+// (async function () {
+//   await printVal("1");
+//   await printVal("2");
+// })();'
+let city = prompt("Enter Name of a city");
+let printData = (cityName) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("data Print Work...", dataPrint);
-      resolve(200);
-    }, 5000);
+      if (cityName !== "") {
+        console.log("the given city Name is ", cityName);
+        resolve(cityName);
+      } else {
+        reject("No city name entered");
+      }
+    }, 2000);
   });
-}
-(async function () {
-  await printVal("1");
-  await printVal("2");
-})();
+};
+
+let cityResult = printData(city);
+cityResult.then((city) => {
+  document.write(`City Name : ${city}`);
+});
+cityResult.catch(() => {
+  document.write("No city entered");
+});

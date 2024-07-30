@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+/* linear-gradient(to right, #018b2d 0%, #018b2d 100%) */
+
+      /* Reset default disabled styles */
+    #songDuration:disabled {
+        background-color: #006eff; /* Tailwind's gray-200 or any color that fits */
+        cursor: not-allowed;
+        opacity: 1; /* Prevent opacity change */
+      }
+      
+      /* Style the range track */
+    #songDuration::-webkit-slider-runnable-track {
+  background: #02bb3d; /* Tailwind's gray-100 or any color */
+      border-radius: 2rem;
+}
+#songDuration::-moz-range-track {
+  background: #0080ff; /* Tailwind's gray-100 or any color */
+}
+#songDuration::-ms-track {
+  background: #0080ff; /* Tailwind's gray-100 or any color */
+}
+
+
+</style>
     <title>Sound Waves</title>
   </head>
   <body class="bg-zinc-900 p-5">
@@ -22,7 +50,7 @@
         name=""
         id="searchField"
         placeholder="Enter A Song Name"
-        class="w-96 bg-zinc-500/50 focus:outline-none text-white mt-5 p-2 rounded-lg"
+        class="w-96 bg-zinc-500/50 focus:outline-none text-white mt-5 py-2 px-2 ml-10 rounded-lg"
       />
       <button class="mt-5 ml-2">
         <img
@@ -33,19 +61,47 @@
     </section>
     <section
       id="player"
-      class="bg-zinc-600 w-full absolute bottom-0 left-0 rounded-lg px-10 py-5"
+      class="bg-zinc-600 w-full absolute bottom-0 left-0 rounded-lg px-10 py-5 flex justify-between items-center"
     >
       <div id="infoSong" class="flex gap-2">
         <img src="assets/dummy.png" alt="" class="w-14 rounded" />
         <div id="songInfo" class="text-white">
-          <h2>SongName</h2>
-          <h3>Artist Name</h3>
+          <h2 class="font-bold">SongName</h2>
+          <h3 class="font-thin">Artist Name</h3>
         </div>
       </div>
-      <div id="mediaControls"></div>
+      <div id="mediaControls" class="flex flex-col justify-center items-center">
+        <div id="controls">
+          <button id="rewindBtn">
+            <img
+              src="assets/fast_rewind_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+              class="w-12"
+            />
+          </button>
+          <button id="ppBtn">
+            <img
+              src="assets/play_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+              class="w-12"
+            />
+          </button>
+          <button id="forwardBtn">
+            <img
+              src="assets/fast_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+              class="w-12"
+            />
+          </button>
+        </div>
+        <div id="bar" class="w-full">
+         <input type="range" name="songDuration" value="1" id="songDuration" class="w-80 disabled:bg-green-700 disabled:opacity-100  " disabled>
+          </div>
+        </div>
+      </div>
       <div id="volumeControls"></div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
   </body>
-
   <script src="app.js"></script>
 </html>
